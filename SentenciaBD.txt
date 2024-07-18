@@ -1,0 +1,5 @@
+create database PersonasBD;
+
+use PersonasBD;
+
+create table Persona( id varchar(50) not null primary key, nombre varchar(25) not null, apellido varchar(25) not null);

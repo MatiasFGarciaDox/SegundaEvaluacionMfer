@@ -36,6 +36,14 @@ namespace Front
             this.label3 = new System.Windows.Forms.Label();
             this.BtnCrearUsr = new System.Windows.Forms.Button();
             this.LbMensaje = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.BtnModificar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TboxApellidoMod = new System.Windows.Forms.TextBox();
+            this.TboxNombreMod = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // TboxNombreIn
@@ -97,11 +105,76 @@ namespace Front
             this.LbMensaje.TabIndex = 6;
             this.LbMensaje.Text = "***";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(269, 95);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(296, 343);
+            this.dataGridView1.TabIndex = 7;
+            // 
+            // BtnModificar
+            // 
+            this.BtnModificar.Location = new System.Drawing.Point(646, 209);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(96, 32);
+            this.BtnModificar.TabIndex = 12;
+            this.BtnModificar.Text = "Modifcar";
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(671, 146);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Apellido";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(671, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Nombre";
+            // 
+            // TboxApellidoMod
+            // 
+            this.TboxApellidoMod.Location = new System.Drawing.Point(626, 162);
+            this.TboxApellidoMod.Name = "TboxApellidoMod";
+            this.TboxApellidoMod.Size = new System.Drawing.Size(140, 20);
+            this.TboxApellidoMod.TabIndex = 9;
+            // 
+            // TboxNombreMod
+            // 
+            this.TboxNombreMod.Location = new System.Drawing.Point(626, 111);
+            this.TboxNombreMod.Name = "TboxNombreMod";
+            this.TboxNombreMod.Size = new System.Drawing.Size(140, 20);
+            this.TboxNombreMod.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(662, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Modificacion";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.BtnModificar);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.TboxApellidoMod);
+            this.Controls.Add(this.TboxNombreMod);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.LbMensaje);
             this.Controls.Add(this.BtnCrearUsr);
             this.Controls.Add(this.label3);
@@ -111,6 +184,7 @@ namespace Front
             this.Controls.Add(this.TboxNombreIn);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,6 +199,13 @@ namespace Front
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnCrearUsr;
         private System.Windows.Forms.Label LbMensaje;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button BtnModificar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TboxApellidoMod;
+        private System.Windows.Forms.TextBox TboxNombreMod;
+        private System.Windows.Forms.Label label6;
     }
 }
 
