@@ -32,5 +32,24 @@ namespace Modelos
             this.Comando.CommandText = sql;
             this.Comando.ExecuteNonQuery();
         }
+
+        public List<ModeloPersona> ObtenerPersonas()
+        {
+            List<ModeloPersona> persona = new List<ModeloPersona>();
+
+            string sql = $"select * from Personas where eliminado = false";
+            this.Comando.CommandText = sql;
+            this.Lector = this.Comando.ExecuteReader();
+
+            while (this.Lector.Read())
+            {
+                ModeloPersona p = new ModeloPersona();
+                p.Id = this.Lector["id"].ToString();
+                p.Nombre = this.Lector["nombre"].ToString();
+                p.Apellido = this.Lector["apellido"].ToString();
+                persona.Add(p);
+            }
+            return persona;
+        }
     }
 }
