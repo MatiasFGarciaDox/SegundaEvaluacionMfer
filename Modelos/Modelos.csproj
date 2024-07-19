@@ -93,6 +93,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModeloPersona.cs" />
     <Compile Include="Modelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
