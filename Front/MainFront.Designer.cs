@@ -1,7 +1,7 @@
 ﻿
 namespace Front
 {
-    partial class Form1
+    partial class MainFront
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -36,14 +36,14 @@ namespace Front
             this.label3 = new System.Windows.Forms.Label();
             this.BtnCrearUsr = new System.Windows.Forms.Button();
             this.LbMensaje = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgridPersonas = new System.Windows.Forms.DataGridView();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.TboxApellidoMod = new System.Windows.Forms.TextBox();
             this.TboxNombreMod = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgridPersonas)).BeginInit();
             this.SuspendLayout();
             // 
             // TboxNombreIn
@@ -95,23 +95,26 @@ namespace Front
             this.BtnCrearUsr.TabIndex = 5;
             this.BtnCrearUsr.Text = "Crear usuario";
             this.BtnCrearUsr.UseVisualStyleBackColor = true;
+            this.BtnCrearUsr.Click += new System.EventHandler(this.BtnCrearUsr_Click);
             // 
             // LbMensaje
             // 
             this.LbMensaje.AutoSize = true;
-            this.LbMensaje.Location = new System.Drawing.Point(87, 288);
+            this.LbMensaje.Location = new System.Drawing.Point(50, 275);
             this.LbMensaje.Name = "LbMensaje";
-            this.LbMensaje.Size = new System.Drawing.Size(19, 13);
+            this.LbMensaje.Size = new System.Drawing.Size(0, 13);
             this.LbMensaje.TabIndex = 6;
-            this.LbMensaje.Text = "***";
             // 
-            // dataGridView1
+            // DgridPersonas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(269, 95);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(296, 343);
-            this.dataGridView1.TabIndex = 7;
+            this.DgridPersonas.AllowUserToAddRows = false;
+            this.DgridPersonas.AllowUserToDeleteRows = false;
+            this.DgridPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgridPersonas.Location = new System.Drawing.Point(269, 95);
+            this.DgridPersonas.Name = "DgridPersonas";
+            this.DgridPersonas.Size = new System.Drawing.Size(296, 343);
+            this.DgridPersonas.TabIndex = 7;
+            this.DgridPersonas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgridPersonas_CellContentClick);
             // 
             // BtnModificar
             // 
@@ -163,7 +166,7 @@ namespace Front
             this.label6.TabIndex = 13;
             this.label6.Text = "Modificacion";
             // 
-            // Form1
+            // MainFront
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,7 +177,7 @@ namespace Front
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TboxApellidoMod);
             this.Controls.Add(this.TboxNombreMod);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DgridPersonas);
             this.Controls.Add(this.LbMensaje);
             this.Controls.Add(this.BtnCrearUsr);
             this.Controls.Add(this.label3);
@@ -182,9 +185,9 @@ namespace Front
             this.Controls.Add(this.TboxApellidoIn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TboxNombreIn);
-            this.Name = "Form1";
+            this.Name = "MainFront";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgridPersonas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,7 +202,7 @@ namespace Front
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnCrearUsr;
         private System.Windows.Forms.Label LbMensaje;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgridPersonas;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

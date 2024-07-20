@@ -37,7 +37,7 @@ namespace Modelos
         {
             List<ModeloPersona> persona = new List<ModeloPersona>();
 
-            string sql = $"select * from Personas where eliminado = false";
+            string sql = $"select * from Persona where eliminado = false";
             this.Comando.CommandText = sql;
             this.Lector = this.Comando.ExecuteReader();
 
