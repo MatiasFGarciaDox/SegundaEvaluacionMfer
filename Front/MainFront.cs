@@ -83,8 +83,17 @@ namespace Front
 
         private void DgridPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            TboxNombreMod.Text = DgridPersonas.SelectedRows[0].Cells["Nombre"].Value.ToString();
-            TboxApellidoMod.Text = DgridPersonas.SelectedRows[0].Cells["Apellido"].Value.ToString();
+            try
+            {
+                TboxNombreMod.Text = DgridPersonas.SelectedRows[0].Cells["Nombre"].Value.ToString();
+                TboxApellidoMod.Text = DgridPersonas.SelectedRows[0].Cells["Apellido"].Value.ToString();
+            }
+            catch {
+                int r = DgridPersonas.CurrentCell.RowIndex;
+
+                TboxNombreMod.Text = DgridPersonas.Rows[r].Cells["Nombre"].Value.ToString();
+                TboxApellidoMod.Text = DgridPersonas.Rows[r].Cells["Apellido"].Value.ToString();
+            }
         }
 
         private void TboxBusqueda_TextChanged(object sender, EventArgs e)
