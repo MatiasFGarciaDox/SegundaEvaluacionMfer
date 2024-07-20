@@ -86,5 +86,10 @@ namespace Front
             TboxNombreMod.Text = DgridPersonas.SelectedRows[0].Cells["Nombre"].Value.ToString();
             TboxApellidoMod.Text = DgridPersonas.SelectedRows[0].Cells["Apellido"].Value.ToString();
         }
+
+        private void TboxBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            (DgridPersonas.DataSource as DataTable).DefaultView.RowFilter = string.Format("Id LIKE '%{0}%'", TboxBusqueda.Text);
+        }
     }
 }

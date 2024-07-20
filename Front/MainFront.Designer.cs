@@ -44,6 +44,8 @@ namespace Front
             this.label6 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.DgridPersonas = new System.Windows.Forms.DataGridView();
+            this.TboxBusqueda = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgridPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -178,11 +180,30 @@ namespace Front
             this.DgridPersonas.TabIndex = 15;
             this.DgridPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgridPersonas_CellClick);
             // 
+            // TboxBusqueda
+            // 
+            this.TboxBusqueda.Location = new System.Drawing.Point(336, 47);
+            this.TboxBusqueda.Name = "TboxBusqueda";
+            this.TboxBusqueda.Size = new System.Drawing.Size(140, 20);
+            this.TboxBusqueda.TabIndex = 16;
+            this.TboxBusqueda.TextChanged += new System.EventHandler(this.TboxBusqueda_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(381, 31);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Buscar ID";
+            // 
             // MainFront
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.TboxBusqueda);
             this.Controls.Add(this.DgridPersonas);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.label6);
@@ -223,6 +244,8 @@ namespace Front
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.DataGridView DgridPersonas;
+        private System.Windows.Forms.TextBox TboxBusqueda;
+        private System.Windows.Forms.Label label7;
     }
 }
 
