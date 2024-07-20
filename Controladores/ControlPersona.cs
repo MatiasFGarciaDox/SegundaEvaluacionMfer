@@ -44,6 +44,17 @@ namespace Controladores
             persona.ModificarApellidoPersona();
         }
 
+        public static Boolean ExistePersona(string id)
+        {
+            ModeloPersona persona = new ModeloPersona();
+            foreach (ModeloPersona p in persona.ObtenerPersonas())
+            {
+                if (p.Id == id)
+                    return true;
+            }
+            return false;
+        }
+
         public static DataTable Listar()
         {
             DataTable tabla = new DataTable();

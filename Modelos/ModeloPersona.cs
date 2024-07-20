@@ -28,7 +28,7 @@ namespace Modelos
         
         public void ModificarApellidoPersona()
         {
-            string sql = $"update Persona set apellido ='{this.Nombre}' where id = '{this.Id}'";
+            string sql = $"update Persona set apellido ='{this.Apellido}' where id = '{this.Id}'";
             this.Comando.CommandText = sql;
             this.Comando.ExecuteNonQuery();
         }
@@ -55,6 +55,22 @@ namespace Modelos
                 p.Nombre = this.Lector["nombre"].ToString();
                 p.Apellido = this.Lector["apellido"].ToString();
                 persona.Add(p);
+            }
+            return persona;
+        }
+
+        public List<ModeloPersona> ListaPersonas()
+        {
+            List<ModeloPersona> persona = new List<ModeloPersona>();
+
+            string sql = $"select id from Persona where eliminado = false";
+            this.Comando.CommandText = sql;
+            this.Lector = this.Comando.ExecuteReader();
+
+            while (this.Lector.Read())
+            {
+                ModeloPersona p = new ModeloPersona();
+                p.Id = this.Lector["id"].ToString();
             }
             return persona;
         }

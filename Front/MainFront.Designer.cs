@@ -36,7 +36,6 @@ namespace Front
             this.label3 = new System.Windows.Forms.Label();
             this.BtnCrearUsr = new System.Windows.Forms.Button();
             this.LbMensaje = new System.Windows.Forms.Label();
-            this.DgridPersonas = new System.Windows.Forms.DataGridView();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@ namespace Front
             this.TboxNombreMod = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
+            this.DgridPersonas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DgridPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,17 +106,6 @@ namespace Front
             this.LbMensaje.Size = new System.Drawing.Size(0, 13);
             this.LbMensaje.TabIndex = 6;
             // 
-            // DgridPersonas
-            // 
-            this.DgridPersonas.AllowUserToAddRows = false;
-            this.DgridPersonas.AllowUserToDeleteRows = false;
-            this.DgridPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgridPersonas.Location = new System.Drawing.Point(269, 95);
-            this.DgridPersonas.Name = "DgridPersonas";
-            this.DgridPersonas.Size = new System.Drawing.Size(296, 343);
-            this.DgridPersonas.TabIndex = 7;
-            this.DgridPersonas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgridPersonas_CellContentClick);
-            // 
             // BtnModificar
             // 
             this.BtnModificar.Location = new System.Drawing.Point(646, 209);
@@ -125,6 +114,7 @@ namespace Front
             this.BtnModificar.TabIndex = 12;
             this.BtnModificar.Text = "Modifcar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // label4
             // 
@@ -177,11 +167,23 @@ namespace Front
             this.BtnEliminar.UseVisualStyleBackColor = true;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
+            // DgridPersonas
+            // 
+            this.DgridPersonas.AllowUserToAddRows = false;
+            this.DgridPersonas.AllowUserToDeleteRows = false;
+            this.DgridPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgridPersonas.Location = new System.Drawing.Point(235, 95);
+            this.DgridPersonas.Name = "DgridPersonas";
+            this.DgridPersonas.Size = new System.Drawing.Size(348, 343);
+            this.DgridPersonas.TabIndex = 15;
+            this.DgridPersonas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgridPersonas_CellClick);
+            // 
             // MainFront
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DgridPersonas);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnModificar);
@@ -189,7 +191,6 @@ namespace Front
             this.Controls.Add(this.label5);
             this.Controls.Add(this.TboxApellidoMod);
             this.Controls.Add(this.TboxNombreMod);
-            this.Controls.Add(this.DgridPersonas);
             this.Controls.Add(this.LbMensaje);
             this.Controls.Add(this.BtnCrearUsr);
             this.Controls.Add(this.label3);
@@ -214,7 +215,6 @@ namespace Front
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnCrearUsr;
         private System.Windows.Forms.Label LbMensaje;
-        private System.Windows.Forms.DataGridView DgridPersonas;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -222,6 +222,7 @@ namespace Front
         private System.Windows.Forms.TextBox TboxNombreMod;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BtnEliminar;
+        private System.Windows.Forms.DataGridView DgridPersonas;
     }
 }
 

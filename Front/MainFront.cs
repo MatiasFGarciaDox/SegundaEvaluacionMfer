@@ -35,8 +35,12 @@ namespace Front
 
         private void BtnCrearUsr_Click(object sender, EventArgs e)
         {
-            
-            ControlPersona.CrearPersona(GenerarId(), TboxNombreIn.Text, TboxApellidoIn.Text);
+            string id = GenerarId();
+
+            if (ControlPersona.ExistePersona(id) == false)
+            {
+
+            ControlPersona.CrearPersona(id, TboxNombreIn.Text, TboxApellidoIn.Text);
 
             TboxNombreIn.Clear();
             TboxApellidoIn.Clear();
@@ -44,11 +48,8 @@ namespace Front
             LbMensaje.Text = "Usuario creado con exito";
 
             RefrescarTablaDePublicaciones();
-        }
-
-        private void DgridPersonas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            }
+            else { LbMensaje.Text = "El usuario ya existe"; }
         }
         private void RefrescarTablaDePublicaciones()
         {
@@ -69,6 +70,21 @@ namespace Front
                 RefrescarTablaDePublicaciones();
                 MessageBox.Show("Persona eliminada");
             }
+        }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            string id = DgridPersonas.SelectedRows[0].Cells["Id"].Value.ToString();
+            ControlPersona.ModificarNomPersona(id, TboxNombreMod.Text);
+            ControlPersona.ModificarApePersona(id, TboxApellidoMod.Text);
+            MessageBox.Show("Se modifico el contenido");
+            RefrescarTablaDePublicaciones();
+        }
+
+        private void DgridPersonas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TboxNombreMod.Text = DgridPersonas.SelectedRows[0].Cells["Nombre"].Value.ToString();
+            TboxApellidoMod.Text = DgridPersonas.SelectedRows[0].Cells["Apellido"].Value.ToString();
         }
     }
 }
