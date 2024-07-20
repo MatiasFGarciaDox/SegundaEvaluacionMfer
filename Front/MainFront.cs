@@ -54,5 +54,21 @@ namespace Front
         {
             DgridPersonas.Refresh();
             DgridPersonas.DataSource = ControlPersona.Listar();        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            string IdPersona = DgridPersonas.SelectedRows[0].Cells["Id"].Value.ToString();
+            DialogResult resultado = MessageBox.Show(
+                $"Esta seguro que quiere eliminar a {IdPersona}?",
+                "Esta seguro?",
+                MessageBoxButtons.YesNo);
+
+            if (resultado.ToString() == "Yes")
+            {
+                ControlPersona.EliminarPersona(IdPersona);
+                RefrescarTablaDePublicaciones();
+                MessageBox.Show("Persona eliminada");
+            }
+        }
     }
 }

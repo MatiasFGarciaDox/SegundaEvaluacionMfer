@@ -33,6 +33,13 @@ namespace Modelos
             this.Comando.ExecuteNonQuery();
         }
 
+        public void EliminarPersona()
+        {
+            string sql = $"update Persona set eliminado = True where id = '{this.Id}'";
+            this.Comando.CommandText = sql;
+            this.Comando.ExecuteNonQuery();
+        }
+
         public List<ModeloPersona> ObtenerPersonas()
         {
             List<ModeloPersona> persona = new List<ModeloPersona>();

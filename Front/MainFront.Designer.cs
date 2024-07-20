@@ -43,6 +43,7 @@ namespace Front
             this.TboxApellidoMod = new System.Windows.Forms.TextBox();
             this.TboxNombreMod = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.BtnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgridPersonas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,11 +167,22 @@ namespace Front
             this.label6.TabIndex = 13;
             this.label6.Text = "Modificacion";
             // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Location = new System.Drawing.Point(646, 332);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(96, 37);
+            this.BtnEliminar.TabIndex = 14;
+            this.BtnEliminar.Text = "Eliminar seleccionado";
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
             // MainFront
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.BtnModificar);
             this.Controls.Add(this.label4);
@@ -209,6 +221,7 @@ namespace Front
         private System.Windows.Forms.TextBox TboxApellidoMod;
         private System.Windows.Forms.TextBox TboxNombreMod;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button BtnEliminar;
     }
 }
 

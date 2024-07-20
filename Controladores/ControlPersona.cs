@@ -21,6 +21,13 @@ namespace Controladores
             persona.GuardarPersona();
         }
 
+        public static void EliminarPersona(string id)
+        {
+            ModeloPersona persona = new ModeloPersona();
+            persona.Id = id;
+            persona.EliminarPersona();
+        }
+
         public static void ModificarNomPersona(string id, string nombre)
         {
             ModeloPersona persona = new ModeloPersona();
